@@ -1,0 +1,36 @@
+.section-3 {
+    width: 100%;
+    height: 100vh;
+    @include display($flex-direction: row, $justify-content: none, $gap: 60px);
+
+    .left {
+        & > img {
+            @include image($width: 492px, $height: 252px, $BgColor: $secondaryColor, $padding: 30px 64px);
+            margin-bottom: 60px;
+                        }
+        .info {
+            @include display($align-items: none, $gap: 20px);
+
+            div {
+                @include display($flex-direction: row, $justify-content:none, $gap: 26px);
+            }
+            
+            img {
+                @include image($width: 40px, $height: 40px, $BgColor: $primarygreen, $padding: 12px);
+            }      
+        }          
+    }
+
+    .right {
+
+        margin-top: 20px;
+
+        img {
+            @include image($width: 528px, $height: 437px, $BgColor: $secondaryColor, $padding: 32px 64px);
+        }
+    }
+    
+    
+
+
+}

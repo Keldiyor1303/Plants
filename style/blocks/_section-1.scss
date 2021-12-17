@@ -1,0 +1,43 @@
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .info-1 {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+
+        h1 {
+            position: relative;
+            margin-bottom: 30px;
+            left: -180px;
+            @include feature($font-weight: 800, $font-size: 60px, $line-height: 130%, $color: $primaryColor);
+
+            span {
+                @include feature($font-weight: 800, $font-size: 75px, $line-height: 130%, $color: $primarygreen);
+            }
+        }
+
+        .btn-margin {
+            display: inline-block;
+            margin: 40px 0px 50px;
+        }
+    }
+}
+
+.info-2 {
+    @include display($flex-direction: row, $justify-content:none, $gap: 80px);
+
+    .number {
+        @include display($align-items:none);
+
+        p:nth-child(1) {
+            @include feature($font-size: 40px, $color: $primarygreen);
+        }
+
+        p:nth-child(2) {
+            @include feature($opacity: 0.6);
+        }
+    }
+}
